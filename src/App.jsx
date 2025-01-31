@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Shield, Tag, Search, Users, Ticket, Clock, CheckCircle } from 'lucide-react';
+import SellTicketForm from './components/SellTicketForm';
+import BuyTickets from './components/BuyTickets';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         </nav>
 
         <Routes>
+        <Route path="/sell-tickets" element={<SellTicketForm />} />
+        <Route path="/buy-tickets" element={<BuyTickets />} />
           <Route path="/" element={
             <main>
               {/* Hero Section */}
